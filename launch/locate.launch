@@ -17,7 +17,7 @@
 		<param name="range_max" value="100.0"/>
 
 		<!-- Frame of your depth sensor = Robot -->
-		<param name="target_frame" value="base_footprint"/>
+		<param name="target_frame" value="human1/base_footprint"/>
 
 		<!-- Topic from which to read PointCloud2 -->
 		<remap from="cloud_in" to="robot_pose_PointCloud2"/>
