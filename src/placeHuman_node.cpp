@@ -7,7 +7,7 @@ PlaceRobotMap::PlaceRobotMap()
 	// Ros Params
 	ros::NodeHandle private_nh("~");
 	private_nh.param(std::string("size_rob"), size_rob_, float(0.6));
-	private_nh.param(std::string("dist_threshold"), dist_threshold_, float(5.0));
+	private_nh.param(std::string("dist_threshold"), dist_threshold_, float(2.0));
 
 	ROS_INFO("=> Params PlaceRobot :");
 	ROS_INFO("size_rob=%f", size_rob_);
