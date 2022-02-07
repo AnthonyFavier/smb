@@ -2,10 +2,10 @@
 
 	<node pkg="tf" type="static_transform_publisher" name="robot_odom_tf" args="0 0 0 0 0 0 /map /odom 20"/>
 	<node name="preprocessing_r_node" pkg="smb" type="preprocessing_r_node" ns="smb">
-		<remap from="/human1/odom" to="/morse_agents/human1/odom"/>
-		<remap from="/odom" to="/morse_agents/pr2/odom"/>
-		<!-- <remap from="/human1/odom" to="/stage_agents/human1/odom"/> -->
-		<!-- <remap from="/odom" to="/stage_agents/pr2/odom"/> -->
+		<!-- <remap from="/human1/odom" to="/morse_agents/human1/odom"/>
+		<remap from="/odom" to="/morse_agents/pr2/odom"/> -->
+		<remap from="/human1/odom" to="/stage_agents/human1/odom"/>
+		<remap from="/odom" to="/stage_agents/pr2/odom"/>
 	</node>
 	<node name="place_human_node" pkg="smb" type="place_human_node" ns="smb"/>
 
