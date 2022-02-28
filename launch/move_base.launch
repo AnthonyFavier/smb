@@ -1,13 +1,13 @@
 <launch>
 
+	<arg name="simulator" default="morse"/>
+
 	<arg name="base_global_planner" default="global_planner/GlobalPlanner"/>
 	<arg name="base_local_planner" default="teb_local_planner/TebLocalPlannerROS"/>
 
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" ns="smb" output="screen">
-		<!-- <remap from="odom" to="/morse_agents/pr2/odom"/>
-		<remap from="cmd_vel" to="/morse_agents/pr2/cmd_vel"/> -->
-		<remap from="odom" to="/stage_agents/pr2/odom"/>
-		<remap from="cmd_vel" to="/stage_agents/pr2/cmd_vel"/>
+		<remap from="odom" to="/$(arg simulator)_agents/pr2/odom"/>
+		<remap from="cmd_vel" to="/$(arg simulator)_agents/pr2/cmd_vel"/>
 
 		<remap from="/map" to="map"/>
 
