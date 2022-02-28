@@ -1,7 +1,7 @@
 controller_frequency: 10.0
 recovery_behavior_enabled: false
 clearing_rotation_allowed: false
-max_planning_retries: 0
+# max_planning_retries: 0
 planner_frequency: 5.0
 
 ###############################################################
@@ -74,7 +74,7 @@ TebLocalPlannerROS:
 
   # Obstacles
 
-  min_obstacle_dist: 0.1
+  min_obstacle_dist: 0.15
   inflation_dist: 0.5
   include_costmap_obstacles: true
   obstacle_association_force_inclusion_factor: 2.0
